@@ -1,0 +1,11 @@
+{
+  "name": "Consulta CEP",
+  "description": "Consulta de CEP do Brasil",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "icons": { "16": "consultacep-16.png", "128": "consultacep-128.png" },
+  "browser_action": {
+    "default_icon": "consultacep-16.png",
+    "default_popup": "window.html"
+  }
+}
