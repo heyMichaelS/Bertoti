@@ -3,8 +3,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?style=for-the-badge)](https://github.com/wgenial/consultace/pulls)
 [![GitHub license](https://img.shields.io/github/license/wgenial/consultacep?style=for-the-badge)](https://github.com/wgenial/consultacep/blob/master/LICENSE)
 
-## Visão Geral
-[https://consultacep.cf](https://consultacep.cf)
 
 - Consulta CEP é uma aplicação básica para consulta de CEP.
 
