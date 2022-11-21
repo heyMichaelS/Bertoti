@@ -15,33 +15,6 @@
 - No CSS foi utilizado o framework [Bluma.io](https://bulma.io)
 
 
-## Preview
-
-![screnshot1](screenshots/1.png)
-
-![screnshot2](screenshots/2.png)
-
-![screnshot3](screenshots/3.png)
-
-![screnshot4](screenshots/4.png)
-
-
-# Chrome Extension
-
-[![Chrome WebStore](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig)
-
-![extensionscrenshot1](chrome-extension/screenshots/1.png)
-
-![extensionscrenshot2](chrome-extension/screenshots/2.png)
-
-![extensionscrenshot3](chrome-extension/screenshots/3.png)
-
-![extensionscrenshot4](chrome-extension/screenshots/4.png)
-
-
 ## Autor
-* [@giovanigenerali](https://github.com/giovanigenerali)
+* [@heyMichaelS](https://github.com/heyMichaelS)
 
-## Colaboradores
-* [@laisfrigerio](https://github.com/laisfrigerio)
-* [@osamuca](https://github.com/osamuca)
