@@ -14,7 +14,7 @@ Metodologia da Pesquisa Cientifico Tecnologica
 apresentado à Faculdade de Tecnologia de São José dos Campos,
 como parte dos requisitos necessários para a obtenção do título de Tecnólogo em Banco de Dados.</p>
 <hr>
-   <h2><li><b>Descrição do Projeto</b></li></h2>
+<h2><li><b>Descrição do Projeto</b></li></h2>
     <p align="justify">
       <a href="https://github.com/heyMichaelS/Iacit">#DASHBOARD METEOROLÓGICO</a> é uma parceria entre a IACIT e a FATEC São José dos Campos com a finalidade de desenvolvimento de um Sistema para apresenta os dados metereologicos,facilitar a visualização dos dados e gerar relatoriosno final de cada pesquisa que o usuario queira visualizar ou apresenta.
     </p>
