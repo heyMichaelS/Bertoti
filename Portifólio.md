@@ -4,7 +4,6 @@ Metodologia da Pesquisa Cientifico Tecnologica
 <html>
   <body>
      <table align="center">
-       
      <tr>
        <p align="center"><img src="https://github.com/fluffyfatec/Iacit/blob/Sprint-1/GIT/cabecario%20(3).jpg" width="100%" height="100%"></img></p>
      </tr>
