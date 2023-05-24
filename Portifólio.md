@@ -14,7 +14,7 @@ Tenho 27 anos e trabalho como Estagiario em QA.
      </tr>
     </table>
 
-## Empresa parceira:
+## Empresa parceira
 
 A IACIT é uma empresa brasileira, fundada em 1986, e com sede em São José dos Campos (SP), um dos principais polos tecnológicos do Brasil e do mundo.
 
@@ -79,10 +79,9 @@ como parte dos requisitos necessários para a obtenção do título de Tecnólog
     
 <details open>
 <summary>Contribuicoes individuais</summary>
-<br>
 Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end onde tivemos uma missão de criar um deashbord intuitivo que fosse possivel ter a visualização de algumas formas de dados meterologicos
 <br>
-
+  
 * Plotar Graficos
 * Desenvolvi telas do deashbord
 * Dsenvolvi a tabela juntamente com a paginação
@@ -91,9 +90,8 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
 
 <details open>
 <summary>Aprendizados Efetivos</summary>
-<br>
-* Com base nesse api na parte onde eu atuei , os graficos usamos Chart.js , os graficos pedidos pelo cliente na aplicação para visualizar os dados e com opção de gerar pdf de cada parte dos graficos ou tabela.
-* Boa parte na atuação do javaScript onde ajudei a desenvolver as logicas por trás do front
+Com base nesse api na parte onde eu atuei , os graficos usamos Chart.js , os graficos pedidos pelo cliente na aplicação para visualizar os dados e com opção de gerar pdf de cada parte dos graficos ou tabela.
+Boa parte na atuação do javaScript onde ajudei a desenvolver as logicas por trás do front
 <br>
 </details>
 
