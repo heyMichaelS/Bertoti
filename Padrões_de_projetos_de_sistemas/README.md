@@ -64,8 +64,9 @@
 
 # Singleton
 
- <img src="https://media.discordapp.net/attachments/887890624475447337/1024124200560119828/UMLBD.png">
+![Singleton](https://github.com/heyMichaelS/Bertoti/assets/118699747/03524ec9-9b48-4ada-ba76-47c977925b6b)
 
+ 
 # Strategy
 
 ![Strategy drawio (1)](https://user-images.githubusercontent.com/118699747/233846540-83137772-a38a-4928-94f0-e46abb0ed9a9.png)
