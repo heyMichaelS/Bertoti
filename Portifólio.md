@@ -77,15 +77,32 @@ como parte dos requisitos necessários para a obtenção do título de Tecnólog
 
 </details>
     
-<details open>
-<summary>Contribuicoes individuais</summary>
+
 Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end onde tivemos uma missão de criar um deashbord intuitivo que fosse possivel ter a visualização de algumas formas de dados meterologicos
 <br>
-  
-* Plotar Graficos
-* Desenvolvi telas do deashbord
-* Dsenvolvi a tabela juntamente com a paginação
-* Auxilei também na exportação tanto das tabelas quanto dos graficos em pdf
+ 
+# Contribuicoes individuais
+
+<details open>
+ <summary>Plotar Graficos</summary>
+</details>
+
+
+
+<details open>
+ <summary>Desenvolvi telas do deashbord</summary>
+</details>
+
+
+<details open>
+ <summary> Dsenvolvi a tabela juntamente com a paginação</summary>
+</details>
+
+
+
+
+<details open>
+ <summary>Auxilei também na exportação tanto das tabelas quanto dos graficos em pdf</summary>
 </details>
 
 <details open>
