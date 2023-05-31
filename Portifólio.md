@@ -202,7 +202,7 @@ function gerarGrafico(){
 
 
 <details open>
- <summary> Dsenvolvi a tabela juntamente com a paginação</summary>
+ <summary> Desenvolvi a tabela juntamente com a paginação</summary>
   
   ```
   // get the table element
@@ -313,10 +313,18 @@ function pageButtons($pCount,$cur) {
   ```
 </details>
 
-<details open>
-<summary>Aprendizados Efetivos</summary>
-Com base nesse api na parte onde eu atuei , os graficos usamos Chart.js , os graficos pedidos pelo cliente na aplicação para visualizar os dados e com opção de gerar pdf de cada parte dos graficos ou tabela.
-Boa parte na atuação do javaScript onde ajudei a desenvolver as logicas por trás do front
-<br>
-</details>
 
+# Aprendizados Efetivos
+<br>
+  
+Trabalhar no projeto da IACIT foi uma experiência enriquecedora para o meu desenvolvimento como profissional na área de front-end. Durante o projeto, fui responsável por diversas tarefas que contribuíram significativamente para a criação de um dashboard eficiente e intuitivo.
+
+Uma das tarefas que executei foi a plotagem de gráficos, onde pude aplicar meus conhecimentos em bibliotecas de visualização de dados, como o Chart.js. Essa atividade me permitiu explorar diferentes tipos de gráficos, como gráficos de linha, barras e histograma, e apresentar as informações meteorológicas de forma clara e atraente.
+
+Além disso, fui encarregado de desenvolver as telas do dashboard, garantindo uma interface amigável e responsiva. Utilizando tecnologias como HTML, CSS e JavaScript, pude criar um layout intuitivo, facilitando a visualização e a interação dos usuários com os dados meteorológicos.
+
+Outra tarefa importante que desempenhei foi o desenvolvimento da tabela, juntamente com a implementação da paginação. Por meio de frameworks como Bootstrap Table, pude criar uma tabela dinâmica que exibisse os dados de forma organizada e permitisse a navegação por várias páginas. Isso tornou a experiência do usuário mais agradável, permitindo uma fácil visualização dos dados.
+
+Além disso, tive a oportunidade de auxiliar na implementação da funcionalidade de exportação, tanto das tabelas quanto dos gráficos, em formato PDF. Essa funcionalidade permitiu que os usuários do sistema pudessem salvar e compartilhar os dados de forma conveniente e portátil.
+
+Essas tarefas desempenhadas no projeto da IACIT contribuíram significativamente para o meu crescimento profissional no campo do front-end. Aprendi a trabalhar com tecnologias avançadas, melhorar minhas habilidades de design de interface e me familiarizar com a manipulação de dados em tempo real. Estou orgulhoso do meu envolvimento no projeto e grato pela oportunidade de aprimorar minhas habilidades no front-end.
