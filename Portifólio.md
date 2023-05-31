@@ -87,6 +87,104 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
  <summary>Plotar Graficos</summary>
   
   ```
+  let tipo = ''
+
+function btnlinha(){
+    tipo = 'line'
+    gerarGrafico()
+}
+
+function btnhist(){
+    tipo = 'bar'
+    gerarGrafico()
+}
+
+
+function gerarGrafico(){
+
+    if (tipo == 'line'){ //LINHA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        const ctx = document.getElementById('grafico').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: tipo,
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    } else { //HISTOGRAMA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        const ctx = document.getElementById('grafico').getContext('2d');
+        const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: [0, 1, 2, 3, 4, 5],
+            datasets: [{
+              label: 'Number of Arrivals',
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            }]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                display: false,
+                barPercentage: 1.3,
+                ticks: {
+                  max: 3,
+                }
+              }, {
+                display: true,
+                ticks: {
+                  autoSkip: false,
+                  max: 4,
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
+          }
+        });
+    }
+
+}
   
   ```
 </details>
@@ -107,6 +205,70 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
  <summary> Dsenvolvi a tabela juntamente com a paginação</summary>
   
   ```
+  // get the table element
+var $table = document.getElementById("tabelaPrecipitacao"),
+// number of rows per page
+$n = 16,
+// number of rows of the table
+$rowCount = $table.rows.length,
+// get the first cell's tag name (in the first row)
+$firstRow = $table.rows[0].firstElementChild.tagName,
+// boolean var to check if table has a head row
+$hasHead = ($firstRow === "TH"),
+// an array to hold each row
+$tr = [],
+// loop counters, to start count from rows[1] (2nd row) if the first row has a head tag
+$i,$ii,$j = ($hasHead)?1:0,
+// holds the first row if it has a (<TH>) & nothing if (<TD>)
+$th = ($hasHead?$table.rows[(0)].outerHTML:"");
+// count the number of pages
+var $pageCount = Math.ceil($rowCount / $n);
+// if we had one page only, then we have nothing to do ..
+if ($pageCount > 1) {
+  // assign each row outHTML (tag name & innerHTML) to the array
+  for ($i = $j,$ii = 0; $i < $rowCount; $i++, $ii++)
+    $tr[$ii] = $table.rows[$i].outerHTML;
+  // create a div block to hold the buttons
+  $table.insertAdjacentHTML("afterend","<div id='buttons'></div");
+  // the first sort, default page is the first one
+  sort(1);
+}
+
+// ($p) is the selected page number. it will be generated when a user clicks a button
+function sort($p) {
+  /* create ($rows) a variable to hold the group of rows
+  ** to be displayed on the selected page,
+  ** ($s) the start point .. the first row in each page, Do The Math
+  */
+  var $rows = $th,$s = (($n * $p)-$n);
+  for ($i = $s; $i < ($s+$n) && $i < $tr.length; $i++)
+    $rows += $tr[$i];
+  
+  // now the table has a processed group of rows ..
+  $table.innerHTML = $rows;
+  // create the pagination buttons
+  document.getElementById("buttons").innerHTML = pageButtons($pageCount,$p);
+  // CSS Stuff
+  document.getElementById("id"+$p).setAttribute("class","chart");
+}
+
+
+// ($pCount) : number of pages,($cur) : current page, the selected one ..
+function pageButtons($pCount,$cur) {
+  /* this variables will disable the "Prev" button on 1st page
+     and "next" button on the last one */
+  var $prevDis = ($cur == 1)?"disabled":"",
+    $nextDis = ($cur == $pCount)?"disabled":"",
+    /* this ($buttons) will hold every single button needed
+    ** it will creates each button and sets the onclick attribute
+    ** to the "sort" function with a special ($p) number..
+    */
+    $buttons = "<input class='chart' type='button' value='&lt;&lt; Anterior' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
+  for ($i=1; $i<=$pCount;$i++)
+    $buttons += "<input  class='chart' type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
+  $buttons += "<input class='chart' type='button' value='Próximo &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
+  return $buttons;
+}
   
   ```
 </details>
@@ -118,6 +280,36 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
  <summary>Auxilei também na exportação tanto das tabelas quanto dos graficos em pdf</summary>
   
   ```
+  function jsGraficosPDF(chart1, chart2, tela) {
+
+    const canvas = document.getElementById(chart1);
+    const canvas2 = document.getElementById(chart2);
+
+    //criando a imagem a partir do gráfico
+    const canvasImage = canvas.toDataURL('image/png', 1);
+    const canvasImage2 = canvas2.toDataURL('image/png', 1);
+
+    //variáveis para o texto do PDF
+    var estado = document.getElementById('estado');
+    var estacao = document.getElementById('estacao');
+    var dataMin = document.getElementById('dtMin');
+    var dataMax = document.getElementById('dtMax');
+
+    //passando a imagem para o pdf
+    let pdf = new jsPDF('landscape');
+    pdf.setFontSize(24);
+    pdf.setFont('helvetica', 'bold');
+    pdf.text(15, 15, ["Estação " + estacao.innerText + ", Estado de " + estado.innerText, " "]);
+    pdf.setFont('helvetica', '');
+    pdf.text(15, 15, [" ", "Dados de " + dataMin.innerText + " até " + dataMax.innerText]);
+    pdf.addImage(canvasImage, 'PNG', 10, 35, 275, 150);
+    pdf.addPage();
+    pdf.addImage(canvasImage2, 'PNG', 10, 30, 275, 150);
+    pdf.save('Gráficos ' + tela + ' (' + estacao.innerText + ').pdf');
+
+}
+
+  
   ```
 </details>
 
