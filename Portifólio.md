@@ -27,7 +27,7 @@ como parte dos requisitos necessários para a obtenção do título de Tecnólog
 <hr>
 <h2><li><b>Descrição do Projeto</b></li></h2>
     <p align="justify">
-      <a href="https://github.com/heyMichaelS/Iacit">#DASHBOARD METEOROLÓGICO</a> é uma parceria entre a IACIT e a FATEC São José dos Campos com a finalidade de desenvolvimento de um Sistema para apresenta os dados metereologicos,facilitar a visualização dos dados e gerar relatoriosno final de cada pesquisa que o usuario queira visualizar ou apresenta.
+      <a href="https://github.com/heyMichaelS/Iacit">#DASHBOARD METEOROLÓGICO</a> Foi elaborado um programa online para a empresa Iacit que permite automatizar o download, processamento e armazenamento simplificado dos dados meteorológicos no banco de dados. Além disso, será possível filtrar esses dados por temperatura, umidade, estações, vento, pressão atmosférica, radiação solar e precipitação, bem como visualizá-los de várias formas. Além disso, foram desenvolvidos diferentes níveis de usuários, juntamente com um painel administrativo, que permite exportar relatórios com base nos dados obtidos.
     </p>
 
 <h2>Tecnologias Utilizadas</h2>
@@ -85,17 +85,30 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
 
 <details open>
  <summary>Plotar Graficos</summary>
+  
+  ```
+  
+  ```
 </details>
 
 
 
 <details open>
  <summary>Desenvolvi telas do deashbord</summary>
+  
+  ```
+  
+  
+  ```
 </details>
 
 
 <details open>
  <summary> Dsenvolvi a tabela juntamente com a paginação</summary>
+  
+  ```
+  
+  ```
 </details>
 
 
@@ -103,6 +116,9 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
 
 <details open>
  <summary>Auxilei também na exportação tanto das tabelas quanto dos graficos em pdf</summary>
+  
+  ```
+  ```
 </details>
 
 <details open>
