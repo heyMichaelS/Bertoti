@@ -30,6 +30,15 @@ como parte dos requisitos necessários para a obtenção do título de Tecnólog
       <a href="https://github.com/heyMichaelS/Iacit">#DASHBOARD METEOROLÓGICO</a> Foi elaborado um programa online para a empresa Iacit que permite automatizar o download, processamento e armazenamento simplificado dos dados meteorológicos no banco de dados. Além disso, será possível filtrar esses dados por temperatura, umidade, estações, vento, pressão atmosférica, radiação solar e precipitação, bem como visualizá-los de várias formas. Além disso, foram desenvolvidos diferentes níveis de usuários, juntamente com um painel administrativo, que permite exportar relatórios com base nos dados obtidos.
     </p>
 
+<p align="center">
+      <img src="https://github.com/fluffyfatec/Iacit/blob/Sprint-2/GIT/VID-20221009-WA0013%20(2).gif" width="100%" height="100%">
+<p align="center">
+
+  
+Dominar a biblioteca Chart.js e a criação de gráficos foi uma experiência técnica enriquecedora. Explorei suas funcionalidades, personalizando a aparência e adicionando interatividade. Agora sou capaz de criar visualizações de dados sofisticadas e profissionais, transmitindo informações complexas de forma clara e impactante. Essa habilidade amplia minhas capacidades como desenvolvedor, oferecendo aos usuários uma experiência excepcional de análise de dados.
+
+
+
 <h2>Tecnologias Utilizadas</h2>
     <details open>
 <summary>Front-End</summary>
@@ -85,6 +94,11 @@ Minha atuação como desenvolvedor do grupo Fluffy fiquei na parte do front-end 
 
 <details open>
  <summary>Plotar Graficos</summary>
+  <br>
+ 
+  Apresentamos abaixo um trecho de código responsável por recuperar informações geradas no banco de dados e exibi-las visualmente na forma de gráficos de linha. Essa funcionalidade permite que os dados sejam apresentados de maneira visual na tela, possibilitando uma análise prioritária de acordo com as necessidades do cliente. Com esse recurso, é possível oferecer uma experiência interativa e personalizada, permitindo que o cliente tome decisões com base nas informações apresentadas de forma clara e visualmente atraente.
+  
+  <br>
   
   ```
   let tipo = ''
@@ -139,63 +153,7 @@ function gerarGrafico(){
             }
         });
 
-    } else { //HISTOGRAMA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        const ctx = document.getElementById('grafico').getContext('2d');
-        const myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: [0, 1, 2, 3, 4, 5],
-            datasets: [{
-              label: 'Number of Arrivals',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            }]
-          },
-          options: {
-            scales: {
-              xAxes: [{
-                display: false,
-                barPercentage: 1.3,
-                ticks: {
-                  max: 3,
-                }
-              }, {
-                display: true,
-                ticks: {
-                  autoSkip: false,
-                  max: 4,
-                }
-              }],
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true
-                }
-              }]
-            }
-          }
-        });
     }
-
-}
-  
-  ```
-</details>
-
-
-
-<details open>
- <summary>Desenvolvi telas do deashbord</summary>
-  
-  ```
-  
   
   ```
 </details>
@@ -203,6 +161,11 @@ function gerarGrafico(){
 
 <details open>
  <summary> Desenvolvi a tabela juntamente com a paginação</summary>
+  <br>
+ 
+  Abaixo com esse trecho de codigo onde no front foi gerada a paginação das tabelas nesse em questão foi da tabela de precipitação onde também é decidido a quantidade de paginas que vai ter de acordo com dados que são poulados na tabela em questão.
+
+  <br> 
   
   ```
   // get the table element
@@ -234,42 +197,6 @@ if ($pageCount > 1) {
   sort(1);
 }
 
-// ($p) is the selected page number. it will be generated when a user clicks a button
-function sort($p) {
-  /* create ($rows) a variable to hold the group of rows
-  ** to be displayed on the selected page,
-  ** ($s) the start point .. the first row in each page, Do The Math
-  */
-  var $rows = $th,$s = (($n * $p)-$n);
-  for ($i = $s; $i < ($s+$n) && $i < $tr.length; $i++)
-    $rows += $tr[$i];
-  
-  // now the table has a processed group of rows ..
-  $table.innerHTML = $rows;
-  // create the pagination buttons
-  document.getElementById("buttons").innerHTML = pageButtons($pageCount,$p);
-  // CSS Stuff
-  document.getElementById("id"+$p).setAttribute("class","chart");
-}
-
-
-// ($pCount) : number of pages,($cur) : current page, the selected one ..
-function pageButtons($pCount,$cur) {
-  /* this variables will disable the "Prev" button on 1st page
-     and "next" button on the last one */
-  var $prevDis = ($cur == 1)?"disabled":"",
-    $nextDis = ($cur == $pCount)?"disabled":"",
-    /* this ($buttons) will hold every single button needed
-    ** it will creates each button and sets the onclick attribute
-    ** to the "sort" function with a special ($p) number..
-    */
-    $buttons = "<input class='chart' type='button' value='&lt;&lt; Anterior' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
-  for ($i=1; $i<=$pCount;$i++)
-    $buttons += "<input  class='chart' type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
-  $buttons += "<input class='chart' type='button' value='Próximo &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
-  return $buttons;
-}
-  
   ```
 </details>
 
@@ -278,6 +205,12 @@ function pageButtons($pCount,$cur) {
 
 <details open>
  <summary>Auxilei também na exportação tanto das tabelas quanto dos graficos em pdf</summary>
+    <br>
+  
+Com base no código abaixo, apresentamos um exemplo do processo de geração de gráficos em PDF. Os parâmetros necessários para a criação de cada imagem são passados, permitindo ao cliente baixar qualquer gráfico de qualquer tela que ofereça essa funcionalidade. Isso oferece flexibilidade ao usuário, que pode escolher livremente quais gráficos deseja incluir em seu PDF.
+ 
+  <br> 
+  
   
   ```
   function jsGraficosPDF(chart1, chart2, tela) {
@@ -314,17 +247,66 @@ function pageButtons($pCount,$cur) {
 </details>
 
 
-# Aprendizados Efetivos
+# 
 <br>
+
+ <details open>
+
+   <summary>Soft skills:</summary>
+     
+   <br>
+ 
+`Trabalho em equipe:` Colaborei de forma eficaz em um projeto, contribuindo para o desenvolvimento de um dashboard eficiente e intuitivo.
   
-Trabalhar no projeto da IACIT foi uma experiência enriquecedora para o meu desenvolvimento como profissional na área de front-end. Durante o projeto, fui responsável por diversas tarefas que contribuíram significativamente para a criação de um dashboard eficiente e intuitivo.
+   <br>
+   
+`Comunicação:` Mantive uma comunicação clara e efetiva com a equipe, garantindo que as tarefas fossem executadas de maneira adequada.
+   
+   <br>
+   
+`Adaptabilidade:` Fui capaz de me adaptar a diferentes desafios e requisitos do projeto, buscando soluções criativas para atender às necessidades dos usuários.
+     
+   <br>
+   
+`Organização:` Gerenciei meu tempo e tarefas de forma eficiente, garantindo que os prazos fossem cumpridos e o trabalho fosse entregue com qualidade.
+    
+   <br>
+   
+`Aprendizado rápido:` Assimilei novas tecnologias e conceitos, como bibliotecas de visualização de dados e frameworks de desenvolvimento web, de forma rápida e eficiente.
+  <br> 
+ </details>
+  
+  
+   <details open>
 
-Uma das tarefas que executei foi a plotagem de gráficos, onde pude aplicar meus conhecimentos em bibliotecas de visualização de dados, como o Chart.js. Essa atividade me permitiu explorar diferentes tipos de gráficos, como gráficos de linha, barras e histograma, e apresentar as informações meteorológicas de forma clara e atraente.
+   <summary>Hard skills:</summary>
+     
+   <br>
+  
+  
 
-Além disso, fui encarregado de desenvolver as telas do dashboard, garantindo uma interface amigável e responsiva. Utilizando tecnologias como HTML, CSS e JavaScript, pude criar um layout intuitivo, facilitando a visualização e a interação dos usuários com os dados meteorológicos.
+`Desenvolvimento Front-end:` Possuo habilidades sólidas em HTML, CSS e JavaScript, aplicando essas tecnologias para criar interfaces amigáveis e responsivas.
 
-Outra tarefa importante que desempenhei foi o desenvolvimento da tabela, juntamente com a implementação da paginação. Por meio de frameworks como Bootstrap Table, pude criar uma tabela dinâmica que exibisse os dados de forma organizada e permitisse a navegação por várias páginas. Isso tornou a experiência do usuário mais agradável, permitindo uma fácil visualização dos dados.
+   <br>
+     
+`Chart.js:` Dominei a biblioteca Chart.js para criar gráficos interativos e atrativos, exibindo informações de maneira clara.
 
-Além disso, tive a oportunidade de auxiliar na implementação da funcionalidade de exportação, tanto das tabelas quanto dos gráficos, em formato PDF. Essa funcionalidade permitiu que os usuários do sistema pudessem salvar e compartilhar os dados de forma conveniente e portátil.
+   <br>
+     
+`Bootstrap Table:` Utilizei o framework Bootstrap Table para desenvolver tabelas dinâmicas e implementar a funcionalidade de paginação.
 
-Essas tarefas desempenhadas no projeto da IACIT contribuíram significativamente para o meu crescimento profissional no campo do front-end. Aprendi a trabalhar com tecnologias avançadas, melhorar minhas habilidades de design de interface e me familiarizar com a manipulação de dados em tempo real. Estou orgulhoso do meu envolvimento no projeto e grato pela oportunidade de aprimorar minhas habilidades no front-end.
+   <br>
+     
+`Figma:`  Adquiri conhecimentos básicos em Figma, utilizando-o para criar esboços de layout e fluxos de interação, contribuindo para a concepção de uma interface de usuário intuitiva.
+
+   <br>
+     
+`UX/UI Design:` Aprendi sobre os princípios de design de experiência do usuário (UX) e design de interface do usuário (UI), aplicando elementos visuais e interativos para facilitar a navegação e criar uma experiência agradável para o usuário.
+   
+   <br>
+     
+</details>
+  
+  
+  
+  
