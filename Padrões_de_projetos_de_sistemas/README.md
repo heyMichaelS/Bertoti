@@ -55,18 +55,16 @@
 <img src="https://user-images.githubusercontent.com/81486915/204660216-35816772-382b-4f6a-816f-bc9cc5be565a.png">
 
 # Composite
-
  ![composite drawio](https://user-images.githubusercontent.com/118699747/233846314-f42781ef-ebe3-4cea-95d7-6ca1e9809176.png)
 
 # Facade
-
 ![composite-Página-3 drawio](https://user-images.githubusercontent.com/118699747/233846429-bd1c238f-b1aa-4d54-9a13-c042978999e7.png)
 
 # Singleton
-
 ![Singleton](https://github.com/heyMichaelS/Bertoti/assets/118699747/03524ec9-9b48-4ada-ba76-47c977925b6b)
 
  
 # Strategy
-
 ![Strategy drawio (1)](https://user-images.githubusercontent.com/118699747/233846540-83137772-a38a-4928-94f0-e46abb0ed9a9.png)
+
+# MVC_Uniao_padroes
