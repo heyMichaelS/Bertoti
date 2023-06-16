@@ -52,7 +52,7 @@
 
 
 # Observer
-<img src="https://user-images.githubusercontent.com/81486915/204660216-35816772-382b-4f6a-816f-bc9cc5be565a.png">
+![Observer](https://github.com/heyMichaelS/Bertoti/assets/118699747/cf5dd195-b673-40c7-8c41-ef8731fb48c0)
 
 # Composite
  ![composite drawio](https://user-images.githubusercontent.com/118699747/233846314-f42781ef-ebe3-4cea-95d7-6ca1e9809176.png)
@@ -65,6 +65,7 @@
 
  
 # Strategy
-![Strategy drawio (1)](https://user-images.githubusercontent.com/118699747/233846540-83137772-a38a-4928-94f0-e46abb0ed9a9.png)
+![Strategy](https://github.com/heyMichaelS/Bertoti/assets/118699747/55d8ddc4-c1a8-4eca-ae92-2335a5d565dc)
 
 # MVC_Uniao_padroes
+![mvc](https://github.com/heyMichaelS/Bertoti/assets/118699747/01f18ce1-c551-4ace-990d-a4a6712f175d)
